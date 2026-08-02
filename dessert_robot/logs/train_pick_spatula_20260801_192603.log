@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/savie/miniforge3/envs/lerobot/bin/lerobot-train", line 6, in <module>
+    sys.exit(main())
+  File "/home/savie/rebot_lerobot/lerobot/src/lerobot/scripts/lerobot_train.py", line 532, in main
+    train()
+  File "/home/savie/rebot_lerobot/lerobot/src/lerobot/configs/parser.py", line 233, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/savie/rebot_lerobot/lerobot/src/lerobot/scripts/lerobot_train.py", line 168, in train
+    cfg.validate()
+  File "/home/savie/rebot_lerobot/lerobot/src/lerobot/configs/train.py", line 139, in validate
+    raise ValueError(
+ValueError: 'policy.repo_id' argument missing. Please specify it to push the model to the hub.
