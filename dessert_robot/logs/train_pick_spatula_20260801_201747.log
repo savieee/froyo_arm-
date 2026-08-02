@@ -1,0 +1,180 @@
+INFO 2026-08-01 20:17:53 ot_train.py:195 {'batch_size': 1,
+ 'checkpoint_path': None,
+ 'dataset': {'episodes': None,
+             'image_transforms': {'enable': False,
+                                  'max_num_transforms': 3,
+                                  'random_order': False,
+                                  'tfs': {'affine': {'kwargs': {'degrees': [-5.0,
+                                                                            5.0],
+                                                                'translate': [0.05,
+                                                                              0.05]},
+                                                     'type': 'RandomAffine',
+                                                     'weight': 1.0},
+                                          'brightness': {'kwargs': {'brightness': [0.8,
+                                                                                   1.2]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'contrast': {'kwargs': {'contrast': [0.8,
+                                                                               1.2]},
+                                                       'type': 'ColorJitter',
+                                                       'weight': 1.0},
+                                          'hue': {'kwargs': {'hue': [-0.05,
+                                                                     0.05]},
+                                                  'type': 'ColorJitter',
+                                                  'weight': 1.0},
+                                          'saturation': {'kwargs': {'saturation': [0.5,
+                                                                                   1.5]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'sharpness': {'kwargs': {'sharpness': [0.5,
+                                                                                 1.5]},
+                                                        'type': 'SharpnessJitter',
+                                                        'weight': 1.0}}},
+             'repo_id': 'seeed_rebot_b601_rs/dessert_pick_spatula',
+             'revision': None,
+             'root': '/home/savie/rebot_lerobot/dessert_robot/datasets/pick_spatula',
+             'streaming': False,
+             'use_imagenet_stats': True,
+             'video_backend': 'torchcodec'},
+ 'env': None,
+ 'eval': {'batch_size': 50, 'n_episodes': 50, 'use_async_envs': False},
+ 'eval_freq': 20000,
+ 'job_name': 'dessert_pick_spatula',
+ 'log_freq': 200,
+ 'num_workers': 4,
+ 'optimizer': {'betas': [0.9, 0.95],
+               'eps': 1e-08,
+               'grad_clip_norm': 10.0,
+               'lr': 0.0001,
+               'type': 'adamw',
+               'weight_decay': 1e-10},
+ 'output_dir': '/home/savie/rebot_lerobot/dessert_robot/checkpoints/pick_spatula',
+ 'peft': None,
+ 'policy': {'adapt_to_pi_aloha': False,
+            'add_image_special_tokens': False,
+            'attention_mode': 'cross_attn',
+            'chunk_size': 50,
+            'device': 'cuda',
+            'empty_cameras': 0,
+            'expert_width_multiplier': 0.75,
+            'freeze_vision_encoder': True,
+            'input_features': {'observation.images.camera1': {'shape': [3,
+                                                                        480,
+                                                                        640],
+                                                              'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.images.camera2': {'shape': [3,
+                                                                        480,
+                                                                        640],
+                                                              'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.state': {'shape': [7],
+                                                     'type': <FeatureType.STATE: 'STATE'>}},
+            'license': None,
+            'load_vlm_weights': True,
+            'max_action_dim': 32,
+            'max_period': 4.0,
+            'max_state_dim': 32,
+            'min_period': 0.004,
+            'n_action_steps': 50,
+            'n_obs_steps': 1,
+            'normalization_mapping': {'ACTION': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'STATE': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'VISUAL': <NormalizationMode.IDENTITY: 'IDENTITY'>},
+            'num_expert_layers': 0,
+            'num_steps': 10,
+            'num_vlm_layers': 16,
+            'optimizer_betas': [0.9, 0.95],
+            'optimizer_eps': 1e-08,
+            'optimizer_grad_clip_norm': 10.0,
+            'optimizer_lr': 0.0001,
+            'optimizer_weight_decay': 1e-10,
+            'output_features': {'action': {'shape': [7],
+                                           'type': <FeatureType.ACTION: 'ACTION'>}},
+            'pad_language_to': 'max_length',
+            'prefix_length': 0,
+            'pretrained_path': '/home/savie/rebot_lerobot/dessert_robot/models/smolvla_base_2cam',
+            'private': None,
+            'push_to_hub': False,
+            'repo_id': None,
+            'resize_imgs_with_padding': [512, 512],
+            'rtc_config': None,
+            'scheduler_decay_lr': 2.5e-06,
+            'scheduler_decay_steps': 30000,
+            'scheduler_warmup_steps': 1000,
+            'self_attn_every_n_layers': 2,
+            'tags': None,
+            'tokenizer_max_length': 48,
+            'train_expert_only': True,
+            'train_state_proj': True,
+            'type': 'smolvla',
+            'use_amp': False,
+            'use_cache': True,
+            'use_delta_joint_actions_aloha': False,
+            'use_peft': False,
+            'vlm_model_name': 'HuggingFaceTB/SmolVLM2-500M-Video-Instruct'},
+ 'rabc_epsilon': 1e-06,
+ 'rabc_head_mode': 'sparse',
+ 'rabc_kappa': 0.01,
+ 'rabc_progress_path': None,
+ 'rename_map': {'observation.images.front': 'observation.images.camera1',
+                'observation.images.side': 'observation.images.camera2'},
+ 'resume': False,
+ 'save_checkpoint': True,
+ 'save_freq': 250,
+ 'scheduler': {'decay_lr': 2.5e-06,
+               'num_decay_steps': 30000,
+               'num_warmup_steps': 1000,
+               'peak_lr': 0.0001,
+               'type': 'cosine_decay_with_warmup'},
+ 'seed': 1000,
+ 'steps': 1000,
+ 'tolerance_s': 0.0001,
+ 'use_policy_training_preset': True,
+ 'use_rabc': False,
+ 'wandb': {'disable_artifact': False,
+           'enable': False,
+           'entity': None,
+           'mode': None,
+           'notes': None,
+           'project': 'lerobot',
+           'run_id': None}}
+INFO 2026-08-01 20:17:53 ot_train.py:203 Logs will be saved locally.
+INFO 2026-08-01 20:17:53 ot_train.py:215 Creating dataset
+INFO 2026-08-01 20:17:53 ot_train.py:233 Creating policy
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 2026-08-01 20:18:02 ot_train.py:288 Creating optimizer and scheduler
+INFO 2026-08-01 20:18:02 hedulers.py:105 Auto-scaling LR scheduler: num_training_steps (1000) < num_decay_steps (30000). Scaling warmup: 1000 → 33, decay: 30000 → 1000 (scale factor: 0.033)
+INFO 2026-08-01 20:18:02 ot_train.py:323 Output dir: /home/savie/rebot_lerobot/dessert_robot/checkpoints/pick_spatula
+INFO 2026-08-01 20:18:02 ot_train.py:330 cfg.steps=1000 (1K)
+INFO 2026-08-01 20:18:02 ot_train.py:331 dataset.num_frames=4823 (5K)
+INFO 2026-08-01 20:18:02 ot_train.py:332 dataset.num_episodes=5
+INFO 2026-08-01 20:18:02 ot_train.py:335 Effective batch size: 1 x 1 = 1
+INFO 2026-08-01 20:18:02 ot_train.py:336 num_learnable_params=99880992 (100M)
+INFO 2026-08-01 20:18:02 ot_train.py:337 num_total_params=450046176 (450M)
+INFO 2026-08-01 20:18:02 ot_train.py:393 Start offline training on a fixed dataset, with effective batch size: 1
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+INFO 2026-08-01 20:18:26 ot_train.py:423 step:200 smpl:200 ep:0 epch:0.04 loss:0.213 grdn:4.524 lr:8.9e-05 updt_s:0.117 data_s:0.005
+INFO 2026-08-01 20:18:32 ot_train.py:443 Checkpoint policy after step 250
+INFO 2026-08-01 20:18:51 ot_train.py:423 step:400 smpl:400 ep:0 epch:0.08 loss:0.146 grdn:3.154 lr:7.9e-05 updt_s:0.112 data_s:0.003
+INFO 2026-08-01 20:19:03 ot_train.py:443 Checkpoint policy after step 500
+Traceback (most recent call last):
+  File "/home/savie/miniforge3/envs/lerobot/bin/lerobot-train", line 6, in <module>
+    sys.exit(main())
+  File "/home/savie/rebot_lerobot/lerobot/src/lerobot/scripts/lerobot_train.py", line 532, in main
+    train()
+  File "/home/savie/rebot_lerobot/lerobot/src/lerobot/configs/parser.py", line 233, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/savie/rebot_lerobot/lerobot/src/lerobot/scripts/lerobot_train.py", line 445, in train
+    save_checkpoint(
+  File "/home/savie/rebot_lerobot/lerobot/src/lerobot/utils/train_utils.py", line 110, in save_checkpoint
+    save_training_state(checkpoint_dir, step, optimizer, scheduler)
+  File "/home/savie/rebot_lerobot/lerobot/src/lerobot/utils/train_utils.py", line 135, in save_training_state
+    save_optimizer_state(optimizer, save_dir)
+  File "/home/savie/rebot_lerobot/lerobot/src/lerobot/optim/optimizers.py", line 300, in save_optimizer_state
+    _save_single_optimizer_state(optimizer, save_dir)
+  File "/home/savie/rebot_lerobot/lerobot/src/lerobot/optim/optimizers.py", line 308, in _save_single_optimizer_state
+    save_file(flat_state, save_dir / OPTIMIZER_STATE)
+  File "/home/savie/miniforge3/envs/lerobot/lib/python3.10/site-packages/safetensors/torch.py", line 323, in save_file
+    serialize_file(
+safetensors._safetensors_rust.SafetensorError: Error while serializing: I/O error: No space left on device (os error 28)
