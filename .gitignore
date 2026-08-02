@@ -1,5 +1,4 @@
-lerobot/
-lerobot/
+lerobot/.git-local-backup/
 dessert_robot/checkpoints/
 dessert_robot/models/
 dessert_robot/evaluations/
