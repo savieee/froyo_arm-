@@ -51,6 +51,8 @@ dessert_robot/
     └── scoop_yogurt_checkpoints/
 ```
 
+if checkpoints directory unavailable, then create it before adding the checkpoint folders into it
+
 ## Setup
 
 Follow the official Seeed Studio setup guide for installing LeRobot, configuring
