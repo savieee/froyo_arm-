@@ -175,7 +175,11 @@ A value of `1` enables a skill, while `0` skips it:
 1 → Run the skill
 0 → Skip the skill
 ```
+## Videos
 
+https://github.com/user-attachments/assets/2111ca79-a796-46a8-a20d-91c35cd5983a
+
+- [Check out more videos here](https://drive.google.com/drive/folders/1UHLZ1gTvTdio_-9fYd3sLZa-g2iSUt_1?usp=drive_link)
 ## Hardware notes
 
 - Follower: Seeed reBot B601-RS
